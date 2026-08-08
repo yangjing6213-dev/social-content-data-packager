@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/yangjing6213-dev/social-content-data-packager/security/policy
+    about: Report security issues privately; do not disclose secrets or personal data in issues.

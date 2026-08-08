@@ -33,7 +33,7 @@ Security = "https://github.com/yangjing6213-dev/social-content-data-packager/sec
 transcribe = ["openai-whisper>=20250625"]
 dev = [
   "build>=1.2,<2",
-  "mypy>=1.11,<2",
+  "mypy>=1.11,<3",
   "pip-audit>=2.7,<3",
   "pytest>=8,<10",
   "pytest-cov>=5,<8",

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="cover-title cover-desc" xml:lang="zh-CN">
+  <title id="cover-title">社交内容数据打包器 · social-content-data-packager</title>
+  <desc id="cover-desc">把公开或已授权的本地导出文件经过校验、打包与复核，生成包含汇总数据和 SHA-256 文件清单的 ZIP 数据包。</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#55756A"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="440" fill="#E8EDE7"/>
+  <rect x="22" y="22" width="1156" height="396" rx="22" fill="#FCFBF7" stroke="#D8E0D9" stroke-width="2"/>
+
+  <g font-family="'Segoe UI', 'Microsoft YaHei UI', 'PingFang SC', sans-serif">
+    <g id="project-title">
+      <circle cx="67" cy="73" r="5" fill="#D37B50"/>
+      <text x="82" y="79" fill="#45685D" font-family="ui-monospace, 'SFMono-Regular', Consolas, monospace" font-size="18" letter-spacing="1">PYTHON CLI · LOCAL FIRST</text>
+
+      <text x="62" y="160" fill="#172B2D" font-size="64" font-weight="700">社交内容</text>
+      <text x="62" y="234" fill="#172B2D" font-size="64" font-weight="700">数据打包器</text>
+      <text x="65" y="269" fill="#61736D" font-family="ui-monospace, 'SFMono-Regular', Consolas, monospace" font-size="18">social-content-data-packager</text>
+
+      <rect x="64" y="290" width="40" height="4" rx="2" fill="#D37B50"/>
+      <text x="64" y="333" fill="#273B3B" font-size="26" font-weight="500">把已导出的社交内容，</text>
+      <text x="64" y="368" fill="#273B3B" font-size="26" font-weight="500">整理成可校验的 ZIP 数据包。</text>
+      <text x="64" y="402" fill="#61736D" font-size="18">公开或已授权 · 文件留在本机</text>
+    </g>
+
+    <path d="M586 62 V380" stroke="#D8E0D9" stroke-width="2"/>
+
+    <g id="project-flow">
+      <text x="620" y="80" fill="#45685D" font-size="20" font-weight="600">处理流程 <tspan font-family="ui-monospace, 'SFMono-Regular', Consolas, monospace" font-size="17">/ LOCAL FILES</tspan></text>
+
+      <g id="input-files" fill="#FFFFFF" stroke="#CCD8D0" stroke-width="1.5">
+        <rect x="620" y="109" width="180" height="49" rx="9"/>
+        <rect x="620" y="173" width="180" height="49" rx="9"/>
+        <rect x="620" y="237" width="180" height="49" rx="9"/>
+      </g>
+
+      <g fill="none" stroke="#668074" stroke-width="1.8" stroke-linejoin="round">
+        <path d="M637 121 H650 L655 126 V146 H637 Z"/>
+        <path d="M650 121 V127 H655"/>
+        <path d="M637 185 H650 L655 190 V210 H637 Z"/>
+        <path d="M650 185 V191 H655"/>
+        <path d="M637 249 H650 L655 254 V274 H637 Z"/>
+        <path d="M650 249 V255 H655"/>
+      </g>
+      <g fill="#61736D" stroke="none">
+        <path d="M640 133 H652 M640 138 H652"/>
+        <path d="M640 197 H652 M640 202 H652"/>
+        <path d="M640 261 H652 M640 266 H652"/>
+      </g>
+      <g fill="#263B38" font-size="18" font-weight="500">
+        <text x="665" y="140">视频素材.mp4</text>
+        <text x="665" y="204">原始评论.xlsx</text>
+        <text x="665" y="268">元数据.json</text>
+      </g>
+
+      <path d="M800 133.5 H811 M800 197.5 H811 M800 261.5 H811 M811 133.5 V261.5 M811 197.5 H830" fill="none" stroke="#8AA096" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+
+      <g id="local-cli">
+        <rect x="830" y="109" width="148" height="177" rx="12" fill="#EEF2EC" stroke="#C9D6CE" stroke-width="1.5"/>
+        <text x="847" y="140" fill="#45685D" font-family="ui-monospace, 'SFMono-Regular', Consolas, monospace" font-size="18" font-weight="600">LOCAL CLI</text>
+        <path d="M847 153 H961" stroke="#D2DDD5" stroke-width="1.5"/>
+        <path d="M855 172 V266" stroke="#C3D2C9" stroke-width="2"/>
+        <g fill="#D37B50">
+          <circle cx="855" cy="180" r="4"/>
+          <circle cx="855" cy="225" r="4"/>
+          <circle cx="855" cy="270" r="4"/>
+        </g>
+        <g fill="#60736C" font-family="ui-monospace, 'SFMono-Regular', Consolas, monospace" font-size="18">
+          <text x="841" y="186">01</text>
+          <text x="841" y="231">02</text>
+          <text x="841" y="276">03</text>
+        </g>
+        <g fill="#263B38" font-family="ui-monospace, 'SFMono-Regular', Consolas, monospace" font-size="18" font-weight="600">
+          <text x="870" y="186">validate</text>
+          <text x="870" y="231">package</text>
+          <text x="870" y="276">verify</text>
+        </g>
+      </g>
+
+      <path d="M978 197.5 H1008" fill="none" stroke="#8AA096" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+      <g id="verified-archive">
+        <rect x="1009" y="109" width="165" height="177" rx="12" fill="#245B50"/>
+        <text x="1023" y="140" fill="#FCFBF7" font-family="ui-monospace, 'SFMono-Regular', Consolas, monospace" font-size="18" font-weight="700">VERIFIED ZIP</text>
+        <path d="M1023 153 H1160" stroke="#5E887C" stroke-width="1.5"/>
+        <g fill="#FBF7ED" font-size="18">
+          <text x="1023" y="186">汇总数据.xlsx</text>
+          <text x="1023" y="222">数据清单.json</text>
+        </g>
+        <path d="M1023 237 H1160" stroke="#5E887C" stroke-width="1.5"/>
+        <text x="1023" y="269" fill="#F4B487" font-family="ui-monospace, 'SFMono-Regular', Consolas, monospace" font-size="18" font-weight="700">SHA-256</text>
+        <path d="M1139 258 L1145 264 L1156 251" fill="none" stroke="#F4B487" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+
+      <circle cx="628" cy="331" r="4" fill="#D37B50"/>
+      <text x="642" y="338" fill="#526B60" font-size="20" font-weight="600">默认不包含未净化的原始评论</text>
+    </g>
+  </g>
+</svg>

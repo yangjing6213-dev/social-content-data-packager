@@ -36,6 +36,8 @@ output/
 *.png
 !docs/assets/
 !docs/assets/*.png
+!assets/readme/
+!assets/readme/*.png
 *.wav
 *.mp3
 *.srt

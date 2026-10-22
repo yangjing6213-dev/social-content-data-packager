@@ -1,4 +1,4 @@
-# 社交内容数据打包器
+# 社交内容数据下载打包器
 
 **social-content-data-packager**
 

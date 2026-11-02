@@ -1,16 +1,28 @@
 # social-content-data-packager
 
+> Check user-provided, authorized videos, copy and comments, then organize them into Excel and ZIP files.
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) [![MIT](https://img.shields.io/badge/MIT-yellowgreen?style=flat-square)](LICENSE)
+
+
+![Project cover](assets/portfolio-promo-2026-11-02/cover-en.jpg)
+
+中文封面与配图：[封面](assets/portfolio-promo-2026-11-02/cover-zh.jpg) · [配图](assets/portfolio-promo-2026-11-02/overview-zh.jpg)
+
 A local Python command-line tool that packages public or authorized social-content exports into ZIP archives with integrity checks.
 
 [简体中文](README.md) | English
 
-[![License: MIT](https://img.shields.io/github/license/yangjing6213-dev/social-content-data-packager?style=flat-square)](https://github.com/yangjing6213-dev/social-content-data-packager/blob/main/LICENSE)
-[![Python](https://img.shields.io/badge/python-%233670A0.svg?style=flat-square&logo=python&logoColor=ffdd54)](https://www.python.org/) [![OpenPyXL](https://img.shields.io/badge/OpenPyXL-3.x-2F6FEB?style=flat-square)](https://openpyxl.readthedocs.io/)
-[![FFmpeg](https://img.shields.io/badge/ffmpeg-%23007808.svg?style=flat-square&logo=ffmpeg&logoColor=white)](https://ffmpeg.org/) [![Whisper optional](https://img.shields.io/badge/Whisper-optional-412991?style=flat-square&logo=openai&logoColor=white)](https://pypi.org/project/openai-whisper/)
-
 The tool accepts local exports such as videos, covers, page copy and comments. It checks the files and creates a Chinese Excel workbook, a ZIP package and a SHA-256 integrity manifest. Video transcription is optional and runs with local Whisper.
 
 Users handle platform sign-in, exports and authorization. You can start with existing files that follow the layout below; this project does not automate collection.
+
+## Workflow diagram (AI concept illustration)
+### Workflow illustration (concept only)
+
+![Project workflow concept illustration](assets/portfolio-promo-2026-11-02/overview-en.jpg)
+
+> AI-generated concept illustration: workflow only, not a real interface, runtime data, or result.
 
 ## What it does
 

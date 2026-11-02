@@ -1,10 +1,15 @@
 # 社交内容数据下载打包器
 
-**social-content-data-packager**
+> 把已获授权的本地视频、文案与评论，检查后汇成 Excel 与 ZIP。
 
-[![License: MIT](https://img.shields.io/github/license/yangjing6213-dev/social-content-data-packager?style=flat-square)](https://github.com/yangjing6213-dev/social-content-data-packager/blob/main/LICENSE)
-[![Python](https://img.shields.io/badge/python-%233670A0.svg?style=flat-square&logo=python&logoColor=ffdd54)](https://www.python.org/) [![OpenPyXL](https://img.shields.io/badge/OpenPyXL-3.x-2F6FEB?style=flat-square)](https://openpyxl.readthedocs.io/)
-[![FFmpeg](https://img.shields.io/badge/ffmpeg-%23007808.svg?style=flat-square&logo=ffmpeg&logoColor=white)](https://ffmpeg.org/) [![Whisper optional](https://img.shields.io/badge/Whisper-optional-412991?style=flat-square&logo=openai&logoColor=white)](https://pypi.org/project/openai-whisper/)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) [![MIT](https://img.shields.io/badge/MIT-yellowgreen?style=flat-square)](LICENSE)
+
+
+![项目封面](assets/portfolio-promo-2026-11-02/cover-zh.jpg)
+
+英文封面与配图：[English cover](assets/portfolio-promo-2026-11-02/cover-en.jpg) · [English overview](assets/portfolio-promo-2026-11-02/overview-en.jpg)
+
+**social-content-data-packager**
 
 给需要整理社交平台导出资料的 AI 创作者和内容整理者，把已获授权的视频、页面文案和评论汇成可编辑、可核对的 Excel 与 ZIP 数据包。
 
@@ -14,19 +19,23 @@
 
 *封面与流程插画含有生成式 AI 内容，已结合项目实际功能核对；图示仅供说明，不代表真实程序界面或运行结果，项目内容由维护者负责。*
 
-![社交内容数据打包器：本地文件经检查后整理成可校验的数据包](assets/readme/social-content-data-packager-cover.svg)
 
 ## 目录
 
 [项目是什么](#1-这个项目是什么) · [先看效果](#2-先看效果) · [适合谁用](#3-适合谁用) · [安装与第一次使用](#6-安装与快速开始) · [如何使用](#7-如何使用) · [注意事项](#10-注意事项与常见问题) · [版本与作者](#11-版本说明)
 
-## 1. 这个项目是什么
+## 一、这个项目是什么？
 
 这是一款在你的电脑上运行的 Python 命令行工具。命令行就是输入文字指令的窗口，例如 Windows 的 PowerShell 或 macOS/Linux 的终端。你把已经导出的本地文件放进任务目录，它会检查必需信息，并生成汇总表、ZIP 数据包和 SHA-256 文件清单。SHA-256 是用来核对文件内容有没有变化的一种校验值。
 
 项目主要面向 DATATOOL 导出的资料；只要本地文件符合项目要求，也可以由你通过其他有权使用的方式取得。它不会替你登录平台或自动采集内容。
 
-## 2. 先看效果
+## 二、先看效果
+### 项目流程图（概念示意）
+
+![项目流程概念示意](assets/portfolio-promo-2026-11-02/overview-zh.jpg)
+
+> AI 概念插画：展示项目思路，不代表真实软件界面、运行数据或实际结果。
 
 仓库目前提供的是字段示例，没有真实用户的视频、评论或完整数据包截图。下图是流程插画，帮助理解 ZIP 和文件清单如何配合；它不是程序运行截图，也不代表一次真实校验结果。
 
@@ -34,7 +43,7 @@
 
 *流程插画：打包后可以运行 `verify` 检查 ZIP 内容、文件清单和 SHA-256。实际结果以你运行命令后看到的提示为准。*
 
-## 3. 适合谁用
+## 三、适合谁用？
 
 ### 特别适合
 
@@ -48,7 +57,7 @@
 - 只想用图形界面点选、不愿安装 Python 和视频工具的人。
 - 希望工具替自己判断授权、版权或评论内容是否适合公开的人；这些需要你自己确认。
 
-## 4. 你会得到什么
+## 四、你会得到什么？
 
 成功打包后，ZIP 默认保存在任务目录的 `输出/` 文件夹中。文件名包含内容标题和生成时间，命令也会打印 ZIP 的完整路径。
 
@@ -62,13 +71,13 @@
 
 原始评论工作簿默认不放进 ZIP。汇总 Excel 仍可能含评论内容，隐私处理方式见[注意事项](#10-注意事项与常见问题)。
 
-## 5. 它能帮你解决什么问题
+## 五、它能帮你解决什么问题？
 
 手动整理时，视频、页面文案、评论和封面容易分散保存，也不容易确认最后的压缩包是否完整。这个工具把必需文件放在固定位置，先检查再打包，并留下可复核的清单。
 
 你仍要自己取得有权使用的素材、补全元数据、检查转写和评论隐私，并决定是否分享数据包。项目不会自动节省某个固定时长，也不能保证导出内容完整或准确。
 
-## 6. 安装与快速开始
+## 六、安装与快速开始
 
 ### 开始前准备
 
@@ -142,7 +151,7 @@ social-content-packager package "我的任务"
 social-content-packager verify "把这里替换为上一步显示的 ZIP 完整路径"
 ```
 
-## 7. 如何使用
+## 七、如何使用？
 
 日常整理按“准备输入 → 校验 → 打包 → 再校验 ZIP”进行。每个新任务使用单独文件夹；修改素材或元数据后，重新运行 `validate` 和 `package`。
 
@@ -175,7 +184,7 @@ social-content-packager package "我的任务" --transcribe-video --model small 
 
 其他输入格式和 DATATOOL 导出步骤见[工作流说明](docs/DATATOOL_WORKFLOW.md)，常见问题见[排障指南](docs/troubleshooting.md)。
 
-## 8. 项目工作流程
+## 八、项目工作流程
 
 1. **你准备素材：** 从公开内容、本人内容或明确授权的内容中取得文件，并填写元数据。
 2. **你整理目录：** `init` 创建模板；你把必需视频、元数据和可选文件放入 `输入/`。
@@ -187,7 +196,7 @@ social-content-packager package "我的任务" --transcribe-video --model small 
 
 *流程插画，不是程序界面。素材由你自己导出并放入目录；项目不会替你获取或判断授权。*
 
-## 9. 项目目录结构
+## 九、项目目录结构
 
 运行 `init` 后，一个任务目录大致如下：
 
@@ -204,7 +213,7 @@ social-content-packager package "我的任务" --transcribe-video --model small 
 
 仓库中的 [`examples/元数据示例.json`](examples/元数据示例.json) 只用于查看字段；`docs/DATATOOL_WORKFLOW.md` 说明如何准备导出文件。一般使用者不需要修改 `src/` 中的程序文件。
 
-## 10. 注意事项与常见问题
+## 十、注意事项与常见问题
 
 ### 评论与隐私
 
@@ -235,15 +244,15 @@ social-content-packager package "我的任务" --transcribe-video --model small 
 
 仅处理你有权使用的资料，并遵守平台规则和适用法律。项目不读取 DATATOOL 账号、浏览器 Cookie 或登录资料；自动采集命令 `collect` 不属于当前稳定命令行。
 
-## 11. 版本说明
+## 十一、版本说明
 
 仓库版本文件 [`pyproject.toml`](pyproject.toml) 当前标注为 `1.0.0`。[`CHANGELOG.md`](CHANGELOG.md) 记录了 `1.0.0` 稳定版本及其更新；目前可用命令为 `init`、`doctor`、`validate`、`transcribe`、`package` 和 `verify`。开发中的 `collect` 尚未作为稳定功能提供。
 
-## 12. 相关项目
+## 十二、相关项目
 
 - [DATATOOL](https://www.datatool.vip/downloader/install-plugin/zh)：用于在浏览器中导出素材；本项目接收你已经保存到本机的文件。浏览器安装方式和可用功能请以 DATATOOL 官方说明为准，也可查看仓库的[导出工作流](docs/DATATOOL_WORKFLOW.md)。
 
-## 13. 关于作者
+## 十三、关于作者
 
 **Enhe（恩禾）｜产品设计师 · 一人公司实践者 · AI Builder**
 
@@ -255,7 +264,7 @@ social-content-packager package "我的任务" --transcribe-video --model small 
 - 微信：Hu-Amen
 - 邮箱：[amen.enhe@gmail.com](mailto:amen.enhe@gmail.com)
 
-## 14. 继续探索
+## 十四、继续探索
 
 我把这个工具做成一个本地整理流程，希望把分散的社交内容导出文件变成容易检查、继续整理的数据包。如果你也在用 AI 做内容或搭建自己的工作流，欢迎到我的网站看看：
 
